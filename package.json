@@ -7,12 +7,16 @@
     "vite": "^5.2.9"
   },
   "dependencies": {
+    "ol": "^9.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styles": "^0.2.1",
+    "ts-proto": "^1.172.0"
   },
   "scripts": {
     "dev": "vite",
     "build": "npm test && vite build",
-    "test": "prettier --check . && tsc --noEmit"
+    "test": "prettier --check . && tsc --noEmit",
+    "generate:win": "protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto.cmd --ts_proto_out=generated/ --ts_proto_opt=esModuleInterop=true ./gtfs-realtime.proto"
   }
 }
