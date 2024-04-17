@@ -1,3 +1,3 @@
 export default {
-  base: "/TorarinT",
+  base: "/KartLecture11",
 };
